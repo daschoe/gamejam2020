@@ -12,7 +12,7 @@ sysinfo.txt
 *.apk
 *.unitypackage
 /Assets/Plugins/Github/
-!/[Aa]ssets/**/*.meta
+/Assets/Plugins/Github.meta
 /[Mm]emoryCaptures/
 # ===================================== #
 # Visual Studio / MonoDevelop generated #
