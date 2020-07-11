@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
     {
 
       //Checks for mouse clicks and whether an object was left-clicked
-      if(Input.GetMouseButtonDown(0))
+      if(Input.GetMouseButtonUp(0))
       {
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y);
@@ -25,25 +25,23 @@ public class PlayerController : MonoBehaviour
         RemoveFocus();
         if (hit.collider != null)
         {
-          Debug.Log("Something was clicked!");
-          Debug.Log(hit.collider.gameObject.name);
+          Debug.Log(hit.collider.gameObject.name + " was left-clicked!");
           Interactable interactable = hit.collider.GetComponent<Interactable>();
           if (interactable != null) {
-            Debug.Log("Something was clicked!");
+            Debug.Log("Interactable was left-clicked!");
           }
         }
       }
 
         //Checks for mouse clicks and whether an object was right-clicked
-        if(Input.GetMouseButtonDown(1))
+        if(Input.GetMouseButtonUp(1))
         {
           Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
           Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y);
           RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero);
           if (hit.collider != null)
           {
-            Debug.Log("Something was clicked!");
-            Debug.Log(hit.collider.gameObject.name);
+            Debug.Log(hit.collider.gameObject.name + " was right-clicked!");
             Interactable interactable = hit.collider.GetComponent<Interactable>();
             if (interactable != null) {
               //sets focus on clicked object
