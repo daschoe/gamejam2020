@@ -11,7 +11,9 @@ sysinfo.txt
 /Assets/AssetStoreTools*
 *.apk
 *.unitypackage
- 
+/Assets/Plugins/Github/
+!/[Aa]ssets/**/*.meta
+/[Mm]emoryCaptures/
 # ===================================== #
 # Visual Studio / MonoDevelop generated #
 # ===================================== #
