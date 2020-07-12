@@ -15,3 +15,6 @@ MonoBehaviour:
   name: Apple
   icon: {fileID: 21300000, guid: 2bf4a2625805f6b4984b0e005a12187e, type: 3}
   isDefaultItem: 0
+  worth: 5
+  type: default
+  amount: 1

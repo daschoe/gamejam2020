@@ -15,3 +15,6 @@ MonoBehaviour:
   name: Eggplant
   icon: {fileID: 21300000, guid: 509c37186a39910469d16e5e94ed341e, type: 3}
   isDefaultItem: 0
+  worth: 10
+  type: default
+  amount: 1

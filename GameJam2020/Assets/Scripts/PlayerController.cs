@@ -1,5 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+//import if using EventSystem
+//using UnityEngine.EventSystems;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -14,6 +16,10 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+      //optional, prevents player from moving while the mouse is
+      //hovering over UI
+      // if (EventSystem.current.IsPointerOverGameObject())
+      //   return;
 
       //Checks for mouse clicks and whether an object was left-clicked
       if(Input.GetMouseButtonUp(0))

@@ -15,3 +15,6 @@ MonoBehaviour:
   name: Mushroom
   icon: {fileID: 21300000, guid: dd8bd598d78148d47b78f0fd42c0d39a, type: 3}
   isDefaultItem: 0
+  worth: 5
+  type: default
+  amount: 1

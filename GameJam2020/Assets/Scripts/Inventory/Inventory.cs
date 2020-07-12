@@ -30,17 +30,24 @@ public class Inventory : MonoBehaviour
     {
       if (!item.isDefaultItem)
       {
-        if (items.Count >= space)
+        int index = items.IndexOf(items.Find(i => i.name == item.name));
+        if (index > -1)
         {
-          Debug.Log("Not enough room.");
-          return false;
+          items[index].amount += item.amount;
         }
-        items.Add(item);
+        else
+        {
+          if (items.Count >= space)
+          {
+            Debug.Log("Not enough room.");
+            return false;
+          }
+          items.Add(item);
+        }
         if (onItemChangedCallback != null)
         {
           onItemChangedCallback.Invoke();
         }
-        Debug.Log("End of add function reached");
         return true;
       }
       return false;
