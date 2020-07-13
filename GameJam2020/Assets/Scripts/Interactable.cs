@@ -18,6 +18,11 @@ public class Interactable : MonoBehaviour
     //This method is meant to be overwritten
     Debug.Log("Interacting with " + transform.name);
   }
+  public virtual void LostFocus ()
+  {
+    //This method is meant to be overwritten
+    Debug.Log(transform.name + "Lost focus");
+  }
   void Update ()
   {
     //if within interaction distance and clicked, do interact
@@ -43,6 +48,7 @@ public class Interactable : MonoBehaviour
     isFocus = false;
     player = null;
     hasInteracted = false;
+    LostFocus();
   }
 
   //Method: OnDrawGizmosSelected

@@ -55,11 +55,28 @@ public class Inventory : MonoBehaviour
 
     //Method: Remove
     //Takes an Item as parameter and removes it from the inventory
-    public void Remove(Item item)
+    public bool Remove(Item item)
     {
-      items.Remove(item);
-      if (onItemChangedCallback != null)
-        onItemChangedCallback.Invoke();
+      if (!item.isDefaultItem)
+      {
+        int index = items.IndexOf(items.Find(i => i.name == item.name));
+        if (index > -1)
+        {
+          items[index].amount -= item.amount;
+          if (items[index].amount == 0)
+            items.Remove(item);
+        }
+        else
+        {
+          items.Remove(item);
+        }
+        if (onItemChangedCallback != null)
+        {
+          onItemChangedCallback.Invoke();
+        }
+        return true;
+      }
+      return false;
     }
 
 }

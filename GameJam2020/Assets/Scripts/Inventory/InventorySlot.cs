@@ -13,7 +13,7 @@ public class InventorySlot : MonoBehaviour
     icon.enabled = true;
     RemoveButton.interactable = true;
     AmountLabel.enabled = true;
-    AmountLabel.text = "" + item.amount;
+    AmountLabel.text = item.amount.ToString();
   }
 
   public void ClearSlot ()
