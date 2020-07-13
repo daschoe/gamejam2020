@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34ecb3a900718cf49997301f7748a51c, type: 3}
+  m_Name: StrawberrySeed
+  m_EditorClassIdentifier: Assembly-CSharp::Crop
+  name: Strawberry Seed
+  icon: {fileID: 21300000, guid: 7aaea71e0580e91438e1308dd422d238, type: 3}
+  isDefaultItem: 0
+  worth: 5
+  type: default
+  amount: 1
+  GrowthTime: 2

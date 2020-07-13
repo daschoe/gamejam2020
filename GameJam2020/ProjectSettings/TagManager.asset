@@ -13,9 +13,9 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
+  - Background
+  - Midground
+  - Foreground
   - 
   - 
   - 
@@ -46,4 +46,7 @@ TagManager:
     locked: 0
   - name: Objects
     uniqueID: 3178100299
+    locked: 0
+  - name: UI
+    uniqueID: 4133697457
     locked: 0
