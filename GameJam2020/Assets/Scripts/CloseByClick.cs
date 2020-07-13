@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class CloseByClick : Interactable
 {
+  public Canvas shopUI;
   public override void LostFocus()
   {
     base.LostFocus();

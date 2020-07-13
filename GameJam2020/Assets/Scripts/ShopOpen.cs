@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ShopOpen : Interactable
 {
-    public Canvas shopUI;
+    public GameObject shopUI;
     //interaction function, overrides base funktion Interact
     public override void Interact()
     {
@@ -16,7 +16,7 @@ public class ShopOpen : Interactable
     void OpenShop ()
     {
       Debug.Log("Opening Shop");
-      //shopUI = GameObject.Find("Shop").GetComponent<Canvas>();
-      shopUI.enabled = true;
+      shopUI.SetActive(true);
+      //shopUI.enabled = true;
     }
 }
