@@ -1750,6 +1750,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 3
   interactionTransform: {fileID: 1030255937}
+  shopUI: {fileID: 0}
 --- !u!1 &1071535757
 GameObject:
   m_ObjectHideFlags: 0
@@ -2092,7 +2093,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: ee7f58cee925eae40aeee7896f771360, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2149,6 +2150,7 @@ GameObject:
   - component: {fileID: 1276952538}
   - component: {fileID: 1276952537}
   - component: {fileID: 1276952536}
+  - component: {fileID: 1276952539}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2221,6 +2223,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1276952539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1276952535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bba2ba09e2d6d01449881f70bf13a1b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  followTarget: {fileID: 0}
+  moveSpeed: 5
 --- !u!1001 &1283023432
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2523,6 +2539,7 @@ GameObject:
   - component: {fileID: 1482424804}
   - component: {fileID: 1482424803}
   - component: {fileID: 1482424806}
+  - component: {fileID: 1482424805}
   m_Layer: 10
   m_Name: player_prop
   m_TagString: Untagged
@@ -2569,7 +2586,7 @@ SpriteRenderer:
   m_SortingLayerID: -1116866997
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d5f7408a559210c40be15a292dc6e109, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a006bb49cb2fb264492de32984a08622, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2594,6 +2611,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1482424805
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1482424802}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 759a0de87f524b74c97e68e000ac0e1d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &1482424806
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2603,10 +2639,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1482424802}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0384bbaaef1e4ad449ada75b484b9cfd, type: 3}
+  m_Script: {fileID: 11500000, guid: 971b5ecd774479d4f9edc95673895d21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   focus: {fileID: 0}
+  moveSpeed: 2
 --- !u!1 &1574149460
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerControl : MonoBehaviour
 {
+    public Interactable focus;
 	public float moveSpeed;
     private Animator anim;
     private bool playerMoving; //switch between idle and walking
