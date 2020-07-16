@@ -19,3 +19,4 @@ MonoBehaviour:
   type: default
   amount: 1
   GrowthTime: 1
+  player: {fileID: 0}

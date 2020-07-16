@@ -5,15 +5,19 @@ using UnityEngine;
 public class PlayerControl : MonoBehaviour
 {
     public Interactable focus;
-	public float moveSpeed;
+    public GameObject currentSpot;
+    public int stamina = 100;
+    public int maxStamina = 100;
+	  public float moveSpeed;
     private Animator anim;
     private bool playerMoving; //switch between idle and walking
     private Vector2 lastMove;
-	
+    public StaminaBar staminabar;
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
+        staminabar.SetMaxStamina(maxStamina);
     }
 
     // Update is called once per frame
@@ -44,7 +48,7 @@ public class PlayerControl : MonoBehaviour
         anim.SetBool("PlayerMove", playerMoving);
         anim.SetFloat("LastMoveX", lastMove.x);
         anim.SetFloat("LastMoveY", lastMove.y);
-    
+
         //optional, prevents player from moving while the mouse is
         //hovering over UI
         // if (EventSystem.current.IsPointerOverGameObject())
@@ -62,7 +66,7 @@ public class PlayerControl : MonoBehaviour
             {
                 Debug.Log(hit.collider.gameObject.name + " was left-clicked!");
                 Interactable interactable = hit.collider.GetComponent<Interactable>();
-                if (interactable != null) 
+                if (interactable != null)
                 {
                     Debug.Log("Interactable was left-clicked!");
                 }
@@ -79,7 +83,7 @@ public class PlayerControl : MonoBehaviour
             {
                 Debug.Log(hit.collider.gameObject.name + " was right-clicked!");
                 Interactable interactable = hit.collider.GetComponent<Interactable>();
-                if (interactable != null) 
+                if (interactable != null)
                 {
                     //sets focus on clicked object
                     SetFocus(interactable);
@@ -87,11 +91,28 @@ public class PlayerControl : MonoBehaviour
             }
         }
     }
+    void OnCollisionEnter2D(Collision2D col)
+    {
+      if(col.gameObject.tag =="PlantingSpot")
+      {
+        currentSpot = col.gameObject;
+        Debug.Log("Walking on planting spot");
+      }
+    }
+    //needs to be reworked, very buggy
+    void OnCollisionExit2D(Collision2D col)
+    {
+      if(col.gameObject.tag =="PlantingSpot")
+      {
+        currentSpot = null;
+        Debug.Log("Leaving planting spot");
+      }
+    }
 
     //Method:SetFocus
     //Sets focus variable to a given parameter
     //single parameter of class Interactable
-    void SetFocus(Interactable newFocus) 
+    void SetFocus(Interactable newFocus)
     {
         if (newFocus != focus)
         {
@@ -104,12 +125,17 @@ public class PlayerControl : MonoBehaviour
         }
     }
 
-    void RemoveFocus() 
+    void RemoveFocus()
     {
         if (focus != null)
         {
             focus.OnDefocused();
         }
         focus = null;
+    }
+    public void ReduceStamina(int amount)
+    {
+      stamina -=amount;
+      staminabar.SetStamina(stamina);
     }
 }

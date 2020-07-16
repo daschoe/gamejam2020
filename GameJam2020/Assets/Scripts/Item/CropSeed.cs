@@ -6,11 +6,24 @@ public class CropSeed : Item
 {
     [Range(1,5)]
     public int GrowthTime;
+    public PlayerControl player;
     //when used on plot, spawn plant
     public override void Use()
     {
-      Debug.Log("Planting " + name);
-      Inventory.instance.Remove(this);
+      player = GameObject.FindWithTag("Player").GetComponent<PlayerControl>();
+      if (player.currentSpot != null && player.stamina >=10)
+      {
+        Debug.Log("Planting " + name);
+        Inventory.instance.Remove(this);
+        GameObject newPlant = (GameObject)Instantiate(Resources.Load("Plant"));
+        Instantiate(newPlant, player.currentSpot.transform.position,Quaternion.identity);
+        player.ReduceStamina(10);
+      }
+      else
+      {
+        Debug.Log("Not standing on a planting spot");
+      }
+
     }
 
 }
