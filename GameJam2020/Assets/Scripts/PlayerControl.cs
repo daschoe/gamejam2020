@@ -96,6 +96,7 @@ public class PlayerControl : MonoBehaviour
       if(col.gameObject.tag =="PlantingSpot")
       {
         currentSpot = col.gameObject;
+        currentSpot.GetComponent<SpriteRenderer>().enabled = true;
         Debug.Log("Walking on planting spot");
       }
     }
@@ -104,6 +105,7 @@ public class PlayerControl : MonoBehaviour
     {
       if(col.gameObject.tag =="PlantingSpot")
       {
+        currentSpot.GetComponent<SpriteRenderer>().enabled = false;
         currentSpot = null;
         Debug.Log("Leaving planting spot");
       }
