@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 //item class, items should be of this class or derive from it
-[CreateAssetMenu(fileName = "NewItemObject", menuName ="Inventory/Item")]
+[CreateAssetMenu(fileName = "NewItemObject", menuName ="Inventory/Item/Default")]
 public class Item : ScriptableObject
 {
   new public string name = "New Item";

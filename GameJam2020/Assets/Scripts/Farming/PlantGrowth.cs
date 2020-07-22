@@ -25,8 +25,11 @@ public class PlantGrowth : MonoBehaviour
       if (dayCounter > crop.GrowthTime)
       {
         Debug.Log("Spawn Item: "+ crop.crop);
-        Instantiate(crop.crop,transform.position,Quaternion.identity,transform);
-        //Destroy(gameObject);
+        Instantiate(crop.crop,transform.position,Quaternion.identity,transform.parent);
+        Destroy(gameObject);
+      } else if (dayCounter == crop.GrowthTime)
+      {
+        this.GetComponent<SpriteRenderer>().sprite = plant;
       } else
       {
         if ( dayCounter == 1)

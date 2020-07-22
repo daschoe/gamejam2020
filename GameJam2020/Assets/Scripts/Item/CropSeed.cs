@@ -6,7 +6,7 @@ public class CropSeed : Item
 {
     [Range(1,5)]
     public int GrowthTime;
-    public Item crop;
+    public GameObject crop;
     public PlayerControl player;
     //when used on plot, spawn plant
     public override void Use()

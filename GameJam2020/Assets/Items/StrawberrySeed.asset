@@ -19,3 +19,5 @@ MonoBehaviour:
   type: default
   amount: 1
   GrowthTime: 2
+  crop: {fileID: 1970424016929588759, guid: 8053a966864586946b49b6a66a84c0dd, type: 3}
+  player: {fileID: 0}
