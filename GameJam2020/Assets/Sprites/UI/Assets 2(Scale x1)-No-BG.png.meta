@@ -1129,7 +1129,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -1473,13 +1473,13 @@ TextureImporter:
       name: Assets 2(Scale x1)-No-BG_13
       rect:
         serializedVersion: 2
-        x: 546
-        y: 457
-        width: 17
-        height: 15
+        x: 548
+        y: 460
+        width: 15
+        height: 12
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 0, y: 0, z: 3, w: 1}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -2776,12 +2776,12 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 26
-        y: 369
+        y: 373
         width: 15
-        height: 15
+        height: 11
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 2, y: 0, z: 2, w: 1}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -2844,7 +2844,7 @@ TextureImporter:
         height: 33
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 1, y: 2, z: 2, w: 1}
+      border: {x: 4, y: 5, z: 5, w: 4}
       outline: []
       physicsShape: []
       tessellationDetail: 0
